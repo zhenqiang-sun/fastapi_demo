@@ -1,0 +1,22 @@
+version: "3"  # docker-compose版本
+services:
+  fastapi_demo: # docker-compose编排名称，一般同微服务名称，注意不要与其他服务重名
+    #    build: .
+    image: "python:3.8"  # docker镜像名及版本
+    hostname: fastapi_demo  # docker容器主机名
+    container_name: fastapi_demo  # docker容器名
+    volumes: # 挂载目录
+      - ..:/app
+      - /share:/share
+    ports: # 端口映射
+      - "58005:8000"
+    environment: # 配置环境变量
+      - TZ=Asia/Shanghai  # 设置时区
+      - FLASK_ENV=dev
+    command: bash /app/docker/run.sh  # 设置启动命令
+    network_mode: bridge  # 网络模式：host、bridge、none等，我们使用bridge
+#    restart: unless-stopped  # 自动启动：unless-stopped、always等，unless-stopped为非正常停止则自动启动
+#    external_links: # 外链其他服务,此处名称为docker-compose编排名
+#      - mongodb
+
+#docker-hub-link: https://hub.docker.com/r/bitnami/python/

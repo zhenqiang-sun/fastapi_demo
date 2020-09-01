@@ -1,0 +1,2 @@
+# fastapi-plus==0.0.2.20200831
+git+https://gitee.com/erlitech/fastapi_plus.git@main
