@@ -10,7 +10,7 @@
 Python 3.8
 
 ### 组件：
-- FastAPI Plus: https://github.com/zhenqiang-sun/fastapi_plus/
+- FastAPI Plus: https://github.com/zhenqiang-sun/fastapi_plus/  https://github.com/zhenqiang-sun/fastapi_plus/  
 - FastAPI: https://fastapi.tiangolo.com/
 - uvicorn: https://www.uvicorn.org/
 - SQLAlchemy: https://www.sqlalchemy.org/
@@ -44,7 +44,8 @@ Python 3.8
 ├─res     # 项目静态资源目录，如附件、图片、视频等文件
 ├─venv    # python 虚拟环境目录
 ├─dev_run.py          # 开发模式运行项目
-└─dev_sync_model.py   # 同步Model：根据数据库中的表结构。
+└─dev_db_2_model.py   # 根据已有数据库表生成 ORM 使用的 model.py
+└─dev_model_2_db.py   # 根据已有 ORM 使用的 model.py 生成数据库表
 ```
 
 
