@@ -12,3 +12,7 @@ class OrgInfoSchema(InfoSchema):
 class OrgDetailSchema(OrgInfoSchema):
     created_time: datetime
     updated_time: datetime
+
+
+class OrgRespDetailSchema(OrgDetailSchema):
+    detail: OrgDetailSchema = None

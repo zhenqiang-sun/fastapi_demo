@@ -56,28 +56,27 @@ async def http_exception_handler(request, exc):
 
 
 @app.middleware('http')
-async def auth_token(request: Request, call_next):
-    request.state.test1 = '123'
+async def auth_token(req: Request, call_next):
     response_type = 1
     response = Response(json.dumps({
         'code': 401,
         'message': 'Unauthorized',
     }), status_code=401)
-    path = request.url.path
+    path = req.method + req.url.path
 
     # 判断是否可匿名访问
-    if path in anonymous_path_list or path.find('/res/') == 0:
+    if path in anonymous_path_list or path.find('GET/res/') == 0:
         response_type = 2
-        response = await call_next(request)
+        response = await call_next(req)
     else:
-        auth_data = get_auth_data_by_authorization(request.headers.get('authorization'), 360000)
+        auth_data = get_auth_data_by_authorization(req.headers.get('authorization'), 360000)
 
         if auth_data:
             response_type = 3
-            response = await call_next(request)
+            response = await call_next(req)
 
     if response_type == 1:
-        log = await create_log(request)
+        log = await create_log(req)
         await update_log(log, response)
 
     return response

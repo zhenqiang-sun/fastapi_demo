@@ -11,3 +11,4 @@ class FastapiConfig:
     swagger_ui_oauth2_redirect_url = '/docs/oauth2-redirect'
     swagger_ui_init_oauth = None
     res_path = 'res'
+    authorization_prefix = 'DEMO'

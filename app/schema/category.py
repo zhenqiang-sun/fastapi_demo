@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from fastapi_plus.schema.base import InfoSchema
+from fastapi_plus.schema.base import InfoSchema, RespDetailSchema
 
 
 class CategoryInfoSchema(InfoSchema):
@@ -11,3 +11,7 @@ class CategoryInfoSchema(InfoSchema):
 class CategoryDetailSchema(CategoryInfoSchema):
     created_time: datetime
     updated_time: datetime
+
+
+class CategoryRespDetailSchema(RespDetailSchema):
+    detail: CategoryDetailSchema = None

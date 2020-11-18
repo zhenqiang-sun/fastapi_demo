@@ -69,8 +69,11 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
 # 开发运行
 python dev_run.py
 
-# 根据已有数据库生成 ORM 使用的 model.py
-python dev_sync_model.py
+# 根据已有数据库表生成 ORM 使用的 model.py
+python dev_db_2_model.py
+
+# 根据已有 ORM 使用的 model.py 生成数据库表
+python dev_model_2_db.py
 ```
 
 
@@ -88,14 +91,14 @@ python dev_sync_model.py
 
 |  请求方法  |  路径  |  说明  |
 |  ----  |  ----  |  ----  |
-| `POST`    | /v1/category      | 创建一个分类 |
-| `DELETE`  | /v1/category/{id} | 删除一个分类 |
-| `PUT`     | /v1/category/{id} | 修改一个分类 |
-| `GET`     | /v1/category/{id} | 获取一个分类 |
-| `POST`    | /v1/category/list | 获取所有分类列表 |
+| `POST`    | /v1/category      | 创建一个类别 |
+| `DELETE`  | /v1/category/{id} | 删除一个类别 |
+| `PUT`     | /v1/category/{id} | 修改一个类别 |
+| `GET`     | /v1/category/{id} | 获取一个类别 |
+| `POST`    | /v1/category/list | 获取类别列表 |
 
 
 
 ## 接口实例
 
-![avatar](res/demo_api_list.png)
+![avatar](res/demo_api_list.jpg)
