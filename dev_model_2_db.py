@@ -2,6 +2,7 @@ from fastapi_plus.model.base import Base
 from sqlalchemy import create_engine
 
 from app.config.db import db_config
+from app.model import *
 
 # 根据Mode创建DB数据表
 
