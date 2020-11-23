@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from fastapi_plus.schema.base import InfoSchema
+from fastapi_plus.schema.base import InfoSchema, RespDetailSchema
 
 
 class OrgInfoSchema(InfoSchema):
@@ -14,5 +14,5 @@ class OrgDetailSchema(OrgInfoSchema):
     updated_time: datetime
 
 
-class OrgRespDetailSchema(OrgDetailSchema):
+class OrgRespDetailSchema(RespDetailSchema):
     detail: OrgDetailSchema = None
