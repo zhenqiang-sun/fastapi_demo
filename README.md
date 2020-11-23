@@ -3,6 +3,8 @@
 
 [Github: FastAPI Demo](https://github.com/zhenqiang-sun/fastapi_demo/)
 
+https://github.com/zhenqiang-sun/fastapi_demo/
+https://gitee.com/erlitech/fastapi_demo/
 
 ## 环境组件
 
@@ -10,7 +12,7 @@
 Python 3.8
 
 ### 组件：
-- FastAPI Plus: https://github.com/zhenqiang-sun/fastapi_plus/  https://github.com/zhenqiang-sun/fastapi_plus/  
+- FastAPI Plus: https://github.com/zhenqiang-sun/fastapi_plus/  https://gitee.com/erlitech/fastapi_plus/
 - FastAPI: https://fastapi.tiangolo.com/
 - uvicorn: https://www.uvicorn.org/
 - SQLAlchemy: https://www.sqlalchemy.org/
