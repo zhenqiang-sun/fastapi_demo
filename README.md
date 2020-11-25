@@ -47,7 +47,8 @@ Python 3.8
 ├─venv    # python 虚拟环境目录
 ├─dev_run.py          # 开发模式运行项目
 └─dev_db_2_model.py   # 根据已有数据库表生成 ORM 使用的 model.py
-└─dev_model_2_db.py   # 根据已有 ORM 使用的 model.py 生成数据库表
+├─dev_model_2_db.py   # 根据已有 ORM 使用的 model.py 生成数据库表
+└─dev_generate_model.py   # 基于Demo代码生成新的模块，省去复制粘贴
 ```
 
 
@@ -77,6 +78,9 @@ python dev_db_2_model.py
 
 # 根据已有 ORM 使用的 model.py 生成数据库表
 python dev_model_2_db.py
+
+# 基于Demo代码生成新的模块，省去复制粘贴
+python dev_generate_model.py 
 ```
 
 
